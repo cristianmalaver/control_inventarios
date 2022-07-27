@@ -12,11 +12,11 @@
       $this->user="root";
       $this->password="";
       $this->server="localhost";
-      $this->database="bdKonecta";
-     // $this->user="u952600060_itadmin";
-     // $this->password="Renting2020*";
+      $this->database="amarilo";
+     // $this->user="user";
+     // $this->password="password";
      // $this->server="localhost";
-     // $this->database="u952600060_obligation";
+     // $this->database="database_name";
           
     }
         public function getUser()

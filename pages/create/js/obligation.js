@@ -38,7 +38,7 @@ function getDataObligation(table, dataSetObligation, typeSend) {
     try {
         loadPageView();
         var xhttp = new XMLHttpRequest();
-        var arrayCell = new Array("Nombre Producto", "Referencia", "Precio", "Peso", "Categoria","Stock","fecha creacion","Acciones");
+        var arrayCell = new Array("Nombre", "apellido","roles", "estado civil","tiene hermanos","fecha nacimiento","Acciones");
         var JsonData;
         var tableAmortization;
 

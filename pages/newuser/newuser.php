@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['User'])) {
-  header("../../pages/login/login.html");
-} else {
-  $var_session  = $_SESSION['User'];
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +9,7 @@ if (!isset($_SESSION['User'])) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>empresa x</title>
+  <title>Amarilo</title>
   <!-- css link -->
   <?php include("../../php/viewHtml/cssLink.php") ?>
   <style>
@@ -47,16 +38,33 @@ if (!isset($_SESSION['User'])) {
 
 <body id="page-top">
   <div class="loadPage" id="loadPage"></div>
+      <!-- Topbar -->
+    
+<!-- Sidebar Toggle (Topbar) -->
+
+
+
+<!-- Topbar Navbar -->
+
   
+
+  <!-- Nav Item - User Information -->
+  <span id="Comp_id" hidden></span>  
+    <span id="labelName" hidden></span>
+    
+
+
+
+
+
+        <!-- End of Topbar -->
   <!--Alert-->
   <div id="myAlert"></div>
   <!--Alert-->
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <!-- Sidebar -->
-    <?php include("../../php/viewHtml/slideMenu.php") ?>
-    <!-- End of Sidebar -->
+
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -64,110 +72,28 @@ if (!isset($_SESSION['User'])) {
       <!-- Main Content -->
       <div id="content">
 
-        <!-- Topbar -->
-        <?php include("../../php/viewHtml/navUser.php") ?>
-        <!-- End of Topbar -->
+    
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Panel Administrativo</h1>
+          <h1 class="h3 mb-2 text-gray-800 text-center">PAGINA DE INICIO </h1>
 
 
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
-              <ul class="nav nav-pills card-header-pills">
-                <li class="nav-item">
-                  <div class=" ml-4">
-                    <button class="btn btn-secondary" data-toggle="modal" data-target="#userModal" onclick="clearForm('form_users', 1);passwordDataForm(1);"><i style="font-size: 2.1rem;" class="material-icons">person_add</i></button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class=" mx-auto col-md-6 align-self-center">
-              <form class="navbar-form" id="formSearchUsers">
-                <div class="input-group ">
-                  <input type="text" value="" class="form-control bg-light border-0 small" placeholder="Usuarios a buscar">
-                  <button type="submit" class="btn btn-primary" onclick="searchUsers(event);return false">
-                    <i class="fas fa-search fa-sm"></i>
-                    <div class="ripple-container"></div>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table  table-fixed" data-order='[[ 1, "asc" ]]' data-page-length='25' id="tableUsers" width="100%" cellspacing="0">
-                </table>
-              </div>
-            </div>
-          </div>
 
-        </div>
-        <!-- /.container-fluid -->
 
-      </div>
-      <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <script>
-                document.write(new Date().getFullYear());
-              </script> | empresa x. </span>
-
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Selecciona "Cerrar sesión" a continuación si está listo para finalizar su sesión personal.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="../../php/class/closeSession.php" onclick="closeSession()" >Cerrar Sessión</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade fullscreen-modal" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="userModalLabel">Usuarios</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+ <!-- Modal -->
+  
+ <div class="modal-header" onload="clearForm('form_users', 1);passwordDataForm(1);">
+          <h5 class="modal-title" id="userModalLabel">Crear tu Usuario</h5>
+         
         </div>
         <div class="modal-body">
           <div class="col-md-12">
             <form id="form_users" class="text-left  was-validated" action="#!" onsubmit="confirmPass();return false">
-            <input type="number" id="User_id" style="visibility:hidden">
+            <input type="number" id="User_id" style="visibility:hidden" value="0">
               <div class="form-row mb-1">
                 <div class="col-md-3 mb-1">
                   <!-- Documento -->
@@ -266,16 +192,67 @@ if (!isset($_SESSION['User'])) {
                 Contraseña no coincide
               </div>
 
+              <button type="submit" class="btn btn-primary" value="Submit" form="form_users">Guardar</button>
+
             </form>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary" value="Submit" form="form_users">Guardar</button>
+        <div class="modal-footer text-center">
+          
+         
         </div>
+ <!-- DataTales Example -->
+ <div class="card shadow mb-4 text-center">
+            <div class="card-header py-3 text-center">
+              <h6 class="m-0 font-weight-bold text-primary text-center">click aca para loguearte en el sistema</h6>
+             
+                    <a class="btn btn-primary" href="../../pages/login/login.html"><i style="font-size: 3.1rem;"  class="material-icons">airplay</i></a>
+                    
+        
+                 
+            </div>
+           
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table  table-fixed" data-order='[[ 1, "asc" ]]' data-page-length='25' id="tableUsers" width="100%" cellspacing="0">
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
       </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; <script>
+                document.write(new Date().getFullYear());
+              </script> | compañia x. </span>
+
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
     </div>
+    <!-- End of Content Wrapper -->
+
   </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  
+ 
+ 
   <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -302,7 +279,7 @@ if (!isset($_SESSION['User'])) {
   <script src="../../js/table-filter.js"></script>
   <script src="../../js/table.js"></script>
   <script src="../../js/selectList.js"></script>
-  <script src="js/user.js"></script>
+  <script src="js/newuser.js"></script>
   <script>
     window.onload = loadView
   </script>

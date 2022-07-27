@@ -1,3 +1,7 @@
+//**Function add User **/
+//**************************//
+//Author: Cristian malaver
+//Date: 16/07/2022
 //Description : funtions user
 /**Function add Usuario**/
 var bolValidatoEdit = true;
@@ -46,7 +50,7 @@ function setDatUser(dataSetUser) {
                 } else {
                     // debugger;
                     viewModal('userModal', 1);
-                    createModalAlert("No se logro procesar la petición ", 3, 3000);
+                    createModalAlert("usuario creado con exito ", 1, 3000);
                     loadView();
                     enableScroll();
                 }
@@ -72,7 +76,7 @@ function getDataUser(table, dataSetUser, typeSend) {
                 // console.log(jsonObj);
                 if (jsonObj.length != 0) {
                     if (typeSend == 1) {
-                        tableCliente = new Table(table, arrayCell, jsonObj);
+                        tableCliente = new Table(table, 0, 0);
                         tableCliente.createTableUsers();
                         enableScroll();
                     } else if (typeSend == 0) {
@@ -109,7 +113,7 @@ function loadView() {
     getListUser("Sgroup_id", 2);
     loadPageView();
     getDataUser("tableUsers", "", 1);
-    getActionStorage();
+    //getActionStorage();
 }
 
 
@@ -156,7 +160,7 @@ function passwordDataForm(option) {
                 pass[i].required = 'true';
             }
             $(".password").fadeIn();
-            document.getElementById('Stat_id').disabled = false;
+            //document.getElementById('Stat_id').disabled = true;
             document.getElementById('Stat_id').value = 7;
 
         } else {
@@ -164,7 +168,7 @@ function passwordDataForm(option) {
                 pass[i].removeAttribute('required');
             }
             $(".password").fadeOut();
-            document.getElementById('Stat_id').disabled = false;
+           // document.getElementById('Stat_id').disabled = false;
 
         }
 

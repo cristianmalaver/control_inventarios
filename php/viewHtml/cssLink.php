@@ -1,8 +1,8 @@
  <!-- Icons  -->
- <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1039259640066924545/UBXkipGD_400x400.jpg">
-  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1039259640066924545/UBXkipGD_400x400.jpg" sizes="16x16" />
-  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1039259640066924545/UBXkipGD_400x400.jpg" sizes="32x32" />
-  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1039259640066924545/UBXkipGD_400x400.jpg" sizes="96x96">
+ <link rel="shortcut icon" href="">
+  <link rel="icon" type="image/png" href="" sizes="16x16" />
+  <link rel="icon" type="image/png" href="" sizes="32x32" />
+  <link rel="icon" type="image/png" href="" sizes="96x96">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

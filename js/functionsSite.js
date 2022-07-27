@@ -1,5 +1,5 @@
 //**************************//
-//Author: DIEGO CASALLAS
+//Author: cristi malan¡vaer
 //Date: 23/08/2019
 //Description : funtions project
 //************GET DATA FORM**************//
@@ -229,8 +229,8 @@ function locationLogin() {
 
 function setInformationUser(json) {
     document.getElementById("labelName").innerHTML = json[0]["User_name"];
-    document.getElementById("User_id").value = json[0]["User_id"];
-    document.getElementById("Comp_id").innerHTML = json[0]["Comp_id"];
+    document.getElementById("User_id").value = "1";	
+    document.getElementById("Comp_id").innerHTML = "1";
 }
 
 function requireds(className) {

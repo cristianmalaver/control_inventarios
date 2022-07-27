@@ -103,7 +103,7 @@ if (!isset($_SESSION['User'])) {
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; <script>
                 document.write(new Date().getFullYear());
-              </script> | Konecta. </span>
+              </script> | amarilo. </span>
 
           </div>
         </div>
@@ -126,12 +126,12 @@ if (!isset($_SESSION['User'])) {
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="delete">seguro quieres eliminar esta obligaacion?</h5>
+          <h5 class="modal-title" id="delete">seguro quieres eliminar esta persona?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Selecciona "Borrar" para eliminar esta obligacion.</div>
+        <div class="modal-body">Selecciona "Borrar" para eliminar esta peronsa.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
           <a class="btn btn-primary" href="/obligation/obligation.php">Borrar</a>
@@ -171,6 +171,7 @@ if (!isset($_SESSION['User'])) {
         <div class="modal-body">
           <div class="col-md-12">
 
+
             <form id="form_customers" class="text-left  was-validated" action="#!" onsubmit="sendData(this.id,event);return false">
               <input type="hidden" id="obligation_id">
 
@@ -183,7 +184,7 @@ if (!isset($_SESSION['User'])) {
                 <div class="col-md-4 mb-1">
                   <!-- Obligación -->
                   <div class="bmd-label-floating">
-                    <h6 class="bmd-label-floating">Nombre del producto a vender</h6>
+                    <h6 class="bmd-label-floating">Nombre pèrsona</h6>
                     <input type="text" id="obligation_cod" class="form-control form-control-sm read" placeholder="Ingresar nombre " required>
                     <div class="valid-feedback">Ok!</div>
                     <div class="invalid-feedback">Proporcione código</div>
@@ -194,7 +195,7 @@ if (!isset($_SESSION['User'])) {
                <div class="col-md-4 mb-1">
                    <!--Obligación -->
                   <div class="bmd-label-floating">
-                    <h6 for="client_idmax">Referencia</h6>
+                    <h6 for="client_idmax">Apellido</h6>
                     <input type="text" id="client_idmax" class="form-control form-control-sm read" placeholder="Ingresar referencia " required>
                     <div class="valid-feedback">Ok!</div>
                     <div class="invalid-feedback">Proporcione un dato valido</div>
@@ -204,8 +205,8 @@ if (!isset($_SESSION['User'])) {
                 <div class="col-md-4 mb-1">
                    <!--Obligación -->
                   <div class="bmd-label-floating">
-                    <h6 for="client_contract">precio</h6>
-                    <input type="number" id="client_contract" class="form-control form-control-sm read" placeholder="Ingresar referencia " required>
+                    <h6 for="client_contract">fecha de nacimiento</h6>
+                    <input type="date" id="client_contract" class="form-control form-control-sm read" placeholder="Ingresar referencia " required>
                     <div class="valid-feedback">Ok!</div>
                     <div class="invalid-feedback">Proporcione un dato valido</div>
                   </div>
@@ -215,22 +216,29 @@ if (!isset($_SESSION['User'])) {
           
             <div class="form-row mb-1">
 
-              <div class="col-md-4 mb-1">
-                   <!--Obligación -->
-                  <div class="bmd-label-floating">
-                    <h6 for="obligation_antigua">peso</h6>
-                    <input type="number" id="obligation_antigua" class="form-control form-control-sm read" placeholder="Ingresar referencia " required>
+      
+
+                <div class="col-md-4 mb-1">
+                
+              
+                <!-- ------------ antigua-->
+                    <h6 for="obligation_antigua">ROL</h6>
+                    <select id="obligation_antigua" class="custom-select custom-select-sm " placeholder="Ingresar valor " required>
+                      <option disabled selected value> -- Seleccione una opción -- </option>
+                      <option value="1">admin</option>
+                      <option value="2">normal person</option>
+                      </select>
                     <div class="valid-feedback">Ok!</div>
-                    <div class="invalid-feedback">Proporcione un dato valido</div>
+                    <div class="invalid-feedback">Proporcione un valor válido.</div>
                   </div>
-                </div>
+
 
 
               <div class="col-md-4 mb-1">
                 
               
               <!-- ------------ antigua-->
-                  <h6 for="category">categoria</h6>
+                  <h6 for="category">tiene hermanos?</h6>
                   <select id="category" class="custom-select custom-select-sm " placeholder="Ingresar valor " required>
                     <option disabled selected value> -- Seleccione una opción -- </option>
                     <option value="1">1</option>
@@ -242,17 +250,24 @@ if (!isset($_SESSION['User'])) {
                   <div class="invalid-feedback">Proporcione un valor válido.</div>
                 </div>
            
-              <!-- ------------ antigua-->
-                  
+       
+
                 <div class="col-md-4 mb-1">
-                   <!--Obligación -->
-                  <div class="bmd-label-floating">
-                    <h6 for="credit_type_id">stock</h6>
-                    <input type="number" id="credit_type_id" class="form-control form-control-sm read" placeholder="Ingresar stock " required>
+                
+              
+                <!-- ------------ antigua-->
+                    <h6 for="credit_type_id">estado civil</h6>
+                    <select id="credit_type_id" class="custom-select custom-select-sm " placeholder="Ingresar valor " required>
+                      <option disabled selected value> -- Seleccione una opción -- </option>
+                      <option value="1">soltero</option>
+                      <option value="2">casado</option>
+                      <option value="3">N/A</option>
+                      </select>
                     <div class="valid-feedback">Ok!</div>
-                    <div class="invalid-feedback">Proporcione un dato valido</div>
+                    <div class="invalid-feedback">Proporcione un valor válido.</div>
                   </div>
-                </div>
+
+
                 
 
             </div>

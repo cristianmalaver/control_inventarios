@@ -3,7 +3,7 @@
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/home.php">
     <div class="sidebar-brand-icon ">
-      <img src="../../img/logo800.jpg" width="170" alt="konecta_papa">
+      <img src="../../img/logo800.jpg" width="80" alt="amarilo">
     </div>
     
   </a>
@@ -65,13 +65,12 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
     <i class="fas fa-clipboard-list"></i>
-      <span>Obligaciones</span>
+      <span>personas</span>
     </a>
     <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Seleccione:</h6>
-        <a class="collapse-item" href="../create/create_product.php">Crear producto</a>
-        <a class="collapse-item" href="../sell/sell_product.php">Vender producto</a>
+        <a class="collapse-item" href="../create/create_product.php">Crear persona</a>
        
       </div>
     </div>

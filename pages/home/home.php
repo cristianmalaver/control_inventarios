@@ -18,7 +18,7 @@ if (!isset($_SESSION['User'])) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Crear Producto</title>
+  <title>Crear persona</title>
   <!-- css link -->
   <?php include("../../php/viewHtml/cssLink.php") ?>
 
@@ -59,7 +59,7 @@ if (!isset($_SESSION['User'])) {
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; <script>
                 document.write(new Date().getFullYear());
-              </script> | Konecta. </span>
+              </script> | amarilo. </span>
 
           </div>
         </div>
